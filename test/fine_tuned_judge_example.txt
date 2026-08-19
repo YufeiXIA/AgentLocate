@@ -1,0 +1,9 @@
+# Example fine-tuned Judge output. This fixture is not an experiment result.
+# Base model: Qwen2.5-7B-Instruct; adapter: example-lora-adapter
+
+Prediction for 2.json:
+Agent Name: Excel_Expert
+Step Number: 0
+Reason for Mistake: The adapted Judge attributes the earliest decisive spreadsheet error to Excel_Expert.
+Raw Response: Agent Name: Excel_Expert
+

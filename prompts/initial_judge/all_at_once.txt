@@ -1,0 +1,19 @@
+You are an AI assistant tasked with analyzing a multi-agent conversation history when solving a real world problem.
+The problem is: {{problem}}.
+Identify which agent made an error, at which step, and explain the reason for the error.
+Here’s the conversation: {{failure_log}}
+
+Based on this conversation, please predict the following:
+1. The name of the agent who made a mistake that should be directly responsible for the wrong solution to the real world problem. If there are no agents that make obvious mistakes, decide one single agent in your mind. Directly output the name of the Expert.
+2. At which step the mistaken agent first made a mistake. For example, in a conversation structured as follows:
+{"agent a": "xx",
+"agent b": "xxxx",
+"agent c": "xxxxx",
+"agent a": "xxxxxxx"}
+each entry represents a `step' where an agent provides input. The `x' symbolizes the speech of each agent. If the mistake is in agent c's speech, the step number is 2. If the second speech by `agent a' contains the mistake, the step number is 3, and so on. Please determine the step number where the first mistake occurred.
+3. The reason for your prediction.
+
+Please answer in the format:
+Agent Name: (Your prediction)
+Step Number: (Your prediction)
+Reason for Mistake: (Your reason)

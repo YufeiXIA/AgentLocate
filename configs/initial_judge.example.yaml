@@ -1,0 +1,20 @@
+# Select exactly one profile at runtime with scripts/run_initial_judge.py.
+benchmark_root: benchmark
+splits:
+  algorithm_generated_test: benchmark/splits/alg_test_indices_seed1500.txt
+  handcrafted_test: benchmark/splits/hand_test_indices_seed1842.txt
+methods: [all_at_once, step_by_step]
+profiles:
+  qwen_7b:
+    backend: transformers
+    model: qwen-7b
+    temperature: 0.6
+    top_p: 0.95
+    max_new_tokens: 1024
+    quantize: none
+  llama_8b:
+    backend: transformers
+    model: meta-llama/Llama-3.1-8B-Instruct
+  gpt_4o:
+    backend: openai
+    model: gpt-4o

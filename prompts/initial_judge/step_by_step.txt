@@ -1,0 +1,10 @@
+You are an AI assistant tasked with evaluating the correctness of each step in an ongoing multi-agent conversation aimed at solving a real-world problem.
+The problem being addressed is: {{problem}}.
+Here is the conversation history up to the current step:
+{{conversation_history}}
+The most recent step ({{step_index}}) was by {{agent_name}}.
+Your task is to determine whether this most recent agent's action (Step {{step_index}}) contains an error that could hinder the problem-solving process or lead to an incorrect solution. Please respond with “Yes” or “No” and provide a clear explanation for your judgment.
+Note: Please avoid being overly critical in your evaluation. Focus on errors that clearly derail the process.
+Attention: Respond ONLY in the format:
+1. Yes/No.
+2. Reason: [Your explanation here]

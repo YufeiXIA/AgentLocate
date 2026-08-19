@@ -1,0 +1,26 @@
+[SYSTEM]
+You are a systematic failure-attribution judge using evidence-first methodology. You MUST complete structured evidence extraction before making any judgment. Follow the evaluation protocol strictly.
+
+[USER]
+Task:
+{{task}}
+
+Failure Log (with line numbers):
+{{failure_log}}
+
+System Predicted Responsible Agent: {{predicted_agent}}
+
+First extract agent actions and failure evidence. Then trace backwards from the failure to the earliest decisive action, excluding agents who only propagated or reported the error. The benchmark uses zero-based step numbers: valid steps are 0 through {{max_step}}.
+
+Return exactly one JSON object:
+{
+  "evidence": {"agent_actions": [{"agent": "...", "step": <integer>, "action": "..."}], "root_cause_line": <integer>},
+  "is_correct": <true|false>,
+  "correct_agent": "<agent name>",
+  "correct_step": <integer>,
+  "confidence": <0.0-1.0>,
+  "rationale_points": [{"line": <integer>, "why": "<text>"}],
+  "improvement_tips": ["<text>"]
+}
+
+Use an agent name from the log; cite concrete lines; identify the root cause rather than its discovery step; keep rationale_points and improvement_tips non-empty; output JSON only.

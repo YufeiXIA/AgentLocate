@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "total": 1,
+    "votes_per_case": 3,
+    "vote_strategy": "hybrid",
+    "agent_prompt_types": ["base", "concise", "evidence_first"],
+    "step_prompt_types": ["cot"]
+  },
+  "top_improvement_tips": [],
+  "items": [
+    {
+      "file": "2.json",
+      "task": "Example Who&When task.",
+      "predicted_agent": "Excel_Expert",
+      "predicted_step": 0,
+      "correct_agent": "Excel_Expert",
+      "correct_step": 0,
+      "confidence": 0.8,
+      "is_correct": true,
+      "votes": [
+        {
+          "correct_agent": "Excel_Expert",
+          "correct_step": 0,
+          "confidence": 0.8,
+          "is_correct": true,
+          "rationale_points": [{"line": 1, "why": "Example evidence point."}],
+          "step_rationale_points": [{"line": 1, "why": "Example step evidence."}],
+          "improvement_tips": ["Add an input validation step."],
+          "_agent_method": "base",
+          "_step_method": "cot",
+          "_vote_id": 0
+        }
+      ]
+    }
+  ]
+}

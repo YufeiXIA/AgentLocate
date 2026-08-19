@@ -1,0 +1,19 @@
+# CLI arguments override these values.
+epochs: 1
+batch_size: 2
+grad_accum: 8
+learning_rate: 0.0001
+cutoff_len: 512
+val_ratio: 0.1
+seed: 42
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules: q_proj,k_proj,v_proj,o_proj,gate_proj,down_proj,up_proj
+quantize: 4bit
+eval_steps: 50
+save_strategy: steps
+save_steps: 200
+logging_steps: 10
+save_total_limit: 2
+lr_scheduler_type: cosine

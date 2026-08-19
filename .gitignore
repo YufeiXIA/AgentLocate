@@ -1,0 +1,31 @@
+# Python and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env*
+*.pem
+*.key
+credentials*.json
+
+# Generated pipeline outputs
+/results/*
+!/results/.gitkeep
+/output/*
+!/output/.gitignore
+!/output/**/
+!/output/**/.gitkeep
+
+# Model and checkpoint files
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+checkpoint-*/
+*.backup_*
+
+# Local caches and editor files
+.cache/
+.vscode/
+.idea/
